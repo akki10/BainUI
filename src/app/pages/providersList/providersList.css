@@ -1,0 +1,32 @@
+.selectionBox {
+  padding: 2px 6px;
+  border:1px solid #e1e1e1;
+  margin: 2px 5px;
+  border-radius: 2px;
+  text-decoration: none;
+  width : auto;
+}
+.filter-container {
+  margin-left: 20px;
+}
+
+.querySpan {
+  padding: 2px 10px;
+  margin: 2px 10px;
+}
+
+ul {
+  list-style-type:none;
+}
+li {
+  float: left;
+}
+
+input[type=text], input[type=number]{
+  width : 50px;
+}
+@media (max-width: 767px) {
+  .smallDisplay {
+    display: none;
+  }
+}

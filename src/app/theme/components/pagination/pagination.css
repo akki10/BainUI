@@ -1,0 +1,80 @@
+pagination {
+  margin: 5px 0px 0px;
+  display: block;
+  text-align: right;
+}
+pagination span {
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+}
+pagination span a {
+  padding: 3px 8px;
+  display: block;
+  font-size: 11px;
+  color: #151212;
+  background: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #dad3d3;
+}
+pagination span.active a {
+  background: #a5a5a5 !important;
+  color: #fff;
+}
+pagination span:hover a {
+  background: #ded8d8;
+}
+.arrow {
+  border: none;
+  padding: 3px 3px;
+  cursor: pointer;
+  border-radius: 1px;
+  background: #f9f9f9;
+  border: 0.3px solid #ddd;
+  display: inline-block;
+}
+.arrow.disabled {
+  color: #aeaeae;
+}
+.pagination span:first-child {
+  border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  margin-right: 3px;
+  margin-left: 10px;
+  padding: 4px 5px 2px 4px;
+}
+.pagination span:last-child {
+  border-radius: 0px 2px 2px 0px;
+  -moz-border-radius: 0px 2px 2px 0px;
+  -webkit-border-radius: 0px 2px 2px 0px;
+  -ms-border-radius: 0px 2px 2px 0px;
+  padding: 4px 4px 2px 5px;
+}
+.next-pre-cont {
+  padding-top: 3px;
+}
+.cust-btn2 {
+  padding: 4px 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+.pagination-cont {
+  display: block;
+}
+.pagination-cont span {
+  font-size: 13px;
+  color: #000;
+}
+.pagination-cont .pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.paginationCol {
+  text-align: right;
+}
+.paginationCol pagination {
+  display: inline-block;
+}

@@ -1,0 +1,16 @@
+﻿<div  class="pagination-cont " style="text-align:right; background-color: #f3eeee">
+    <span>{{pager.startItem}}-{{pager.endItem}} of {{pager.totalItems}} {{pageSuffix}}</span>
+    <div *ngIf="pager.pages && pager.pages.length && pager.pages.length > 1" class="pagination">
+        <span (click)="setPage(pager.currentPage - 1)" class="arrow" [ngClass]="{disabled:pager.currentPage === 1}">
+          <a >
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </a>
+        </span>
+        <span (click)="setPage(pager.currentPage + 1)" class="arrow" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a >
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </span>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<h2 style="text-align: center">Providers</h2>
+<div class="col-md-12 smallDisplay">
+  <div class="col-md-1"> Selectors:</div>
+  <div class="col-md-10 ">
+    <span *ngFor="let selector of selectors" class="form-check selectionBox">
+      <label class="form-check-label">
+        <input type="checkbox" [checked]="this.selectionMap[selector]" (change)="onSelectorToggle($event,selector)" class="form-check-input">
+        {{selector}}
+      </label>
+    </span>
+  </div>
+    <!--<span class="selectionBox" >-->
+      <!--<input type="checkbox" >-->
+      <!--<label style="word-wrap:break-word; width:auto;"></label>-->
+    <!--</span>-->
+</div>
+<div class="col-md-12 smallDisplay">
+  <div class="col-md-1"> Filters:</div>
+  <div class="col-md-10 ">
+    <span class="querySpan">
+      <label>Discharges</label>
+      <input type="number" name="min_discharges" placeholder="Min." (change)="onQueryChange($event)">
+      <input type="number" name="max_discharges" placeholder="Max." (change)="onQueryChange($event)">
+    </span>
+    <span  class="querySpan">
+      <label>Average Covered Charges</label>
+      <input type="number" name="min_average_covered_charges" placeholder="Min." (change)="onQueryChange($event)">
+      <input type="number" name="max_average_covered_charges" placeholder="Max." (change)="onQueryChange($event)">
+    </span>
+    <span  class="querySpan">
+      <label>Average Medicare Payments</label>
+      <input type="number" name="min_average_medicare_payments" placeholder="Min." (change)="onQueryChange($event)">
+      <input type="number" name="max_average_medicare_payments" placeholder="Max." (change)="onQueryChange($event)">
+    </span>
+    <span  class="querySpan">
+      <label>State</label>
+      <input type="text" maxlength="2" name="state" placeholder="State" (change)="onQueryChange($event)">
+    </span>
+  </div>
+</div>
+<div class="col-md-12">
+  <app-pagination *ngIf="totalProviders" [count]="totalProviders" [pageSize]="pageSize" [pageSuffix]="'Providers'" [(currPage)]="page" (currPageChange)="onPageChange()"></app-pagination>
+</div>
+<div>
+  <app-table [jsonData]="providersData"></app-table>
+</div>
